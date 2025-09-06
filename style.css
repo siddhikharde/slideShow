@@ -1,0 +1,30 @@
+.slideshow {
+    position: relative;
+    width: fit-content;
+    margin: 50px auto;
+}
+
+.slide{
+    height: 600px;
+    width: 800px;
+    object-fit: cover;
+    display: block;
+}
+.ico-action {
+    position: absolute;
+    height: 60px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.ico-left{
+    left: -50px;
+    top: 50%;
+}
+.ico-left:hover, .ico-right:hover{
+    transform: scale(0.8);
+}
+
+.ico-right{
+    right: 0px;
+    top: 50%;
+}
