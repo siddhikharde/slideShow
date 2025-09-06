@@ -8,10 +8,47 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="slideshow">
-        <img src="./images/5.jpg" alt="" class="slide">
-        <img src="./images/previous.png" alt="" class="ico-action ico-left   height-80">
-        <img src="./images/next.png" alt="" class="ico-action ico-right height-80">
+    <h1>Welcome to My Slideshow</h1>
+    <div class="container">
+            <div class="slideshow">
+        <img src="./images/5.jpg" alt="" class="slide" id="slide">
+        <img src="./images/previous.png" alt="prev" class="ico-action ico-left  " onclick="prev()">
+        <img src="./images/next.png" alt="next" class="ico-action ico-right " onclick="next()">
     </div>
+    <div class="slideshow">
+        <img src="./images/5d.jpg" alt="" class="slide" id="slide">
+        <img src="./images/previous.png" alt="prev" class="ico-action ico-left  " onclick="prev()">
+        <img src="./images/next.png" alt="next" class="ico-action ico-right " onclick="next()">
+    </div>
+    </div>
+
+    <script>
+        const images=[
+            "./images/1.jpg",
+            "./images/2.jpg",
+            "./images/3.jpg",
+            "./images/4.jpg",
+            "./images/5.jpg",
+            "./images/6.jpg",
+            "./images/7.jpg",
+            "./images/8.jpg",
+        ];
+        let currentIndex=4;
+        let next=()=>{
+            currentIndex++;
+            if(currentIndex>=images.length){
+                currentIndex=0;
+            }
+           slide.src=images[currentIndex];
+        }
+        let prev=()=>{
+            currentIndex--;
+            if(currentIndex<0){
+                currentIndex=images.length-1;
+            }
+            slide.src=images[currentIndex];
+        }
+        setInterval(next,3000);
+    </script>
 </body>
 </html>
