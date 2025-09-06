@@ -1,29 +1,37 @@
+*{
+    box-sizing: border-box;
+}
+
 .slideshow {
     position: relative;
     width: fit-content;
     margin: 50px auto;
+
 }
 
 .slide{
-    height: 600px;
-    width: 800px;
+    height: 800px;
+    width: 700px;
     object-fit: cover;
     display: block;
+    border-radius: 15px;
 }
 .ico-action {
     position: absolute;
-    height: 60px;
+    height: 70px;
     cursor: pointer;
     transition: 0.5s;
 }
 .ico-left{
-    left: -50px;
+    left: 0px;
     top: 50%;
 }
-.ico-left:hover, .ico-right:hover{
-    transform: scale(0.8);
+.ico-left:hover {
+    transform: scale(0.7) translateX(-20px);
 }
-
+.ico-right:hover {
+    transform: scale(0.7) translateX(20px);
+}
 .ico-right{
     right: 0px;
     top: 50%;
