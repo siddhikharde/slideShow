@@ -15,11 +15,7 @@
         <img src="./images/previous.png" alt="prev" class="ico-action ico-left  " onclick="prev()">
         <img src="./images/next.png" alt="next" class="ico-action ico-right " onclick="next()">
     </div>
-    <div class="slideshow">
-        <img src="./images/5d.jpg" alt="" class="slide" id="slide">
-        <img src="./images/previous.png" alt="prev" class="ico-action ico-left  " onclick="prev()">
-        <img src="./images/next.png" alt="next" class="ico-action ico-right " onclick="next()">
-    </div>
+ 
     </div>
 
     <script>
@@ -34,6 +30,7 @@
             "./images/8.jpg",
         ];
         let currentIndex=4;
+      
         let next=()=>{
             currentIndex++;
             if(currentIndex>=images.length){
@@ -49,6 +46,6 @@
             slide.src=images[currentIndex];
         }
         setInterval(next,3000);
-    </script>
+          </script>
 </body>
 </html>
